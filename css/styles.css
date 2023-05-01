@@ -1,0 +1,175 @@
+:root {
+  color: var(#b4ffe0);
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  margin: 16px;
+  background-color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+
+.logo {
+  font-family: "Ubuntu";
+  color: #161d2a;
+  text-decoration: wavy;
+  justify-content: center;
+  display: flex;
+  font-size: 50px;
+  display: inline-flex;
+}
+
+li {
+  color: #161d2a;
+}
+
+b {
+  color: #161d2a;
+  background-color: #b5ffaa;
+}
+
+.logo:hover {
+  color: #161d2a;
+}
+
+.top {
+  /* font-size: 48px;
+  display: flex;
+  justify-content: right; */
+  text-decoration: none;
+}
+
+/* .top-text {
+  font-size: 12px;
+} */
+
+header {
+  background-color: #c2f9ff;
+  width: 100%;
+  /* position: unset; */
+  /* justify-content: center;
+  display: flex; */
+}
+
+/* .header-item {
+ display: inline-flex;
+  gap: 40px;
+  height: 100px;
+  align-items: center;
+  padding-right: 24px;
+} */
+
+/* 
+.menu {
+  list-style: none;
+  position: absolute;
+  top: 10px;
+  right: 100px;
+} */
+
+.menu {
+  list-style: none;
+}
+
+.reason-for-writing-website {
+  background-color: #c7ffe8;
+}
+
+h2 {
+  background-color: #bdf7ff;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+/* .reason-for-writing-website {
+  font-family: "Delicious Handrawn";
+  font-size: larger;
+} */
+
+.inspiration {
+  text-decoration: dotted;
+}
+
+.dictionary {
+  background-color: #4cffb4;
+  width: 4.8em;
+}
+
+/* .chess {
+  background-image: url("https://cdn.hswstatic.com/gif/chess-4.jpg");
+} */
+
+.describing_of_my_days {
+  /* background-image: url("https://st4.depositphotos.com/14730510/39794/i/450/depositphotos_397940336-stock-photo-grunge-old-page-notebook-background.jpg"); */
+}
+
+a:hover {
+  color: tomato;
+}
+
+a.logo:hover {
+  color: rgb(88, 88, 88);}
+
+a:focus {
+  color: tomato;
+}
+
+a:active {
+  color: teal;
+}
+
+.my-english-project-item {
+  color: rgba(255, 255, 255, 0);
+}
+
+.pickle {
+  color: teal;
+}
+
+.about-me {
+  background-color: #a1ffd8;
+}
+
+button {
+  background-color: #a1c3ff;
+  display: flex;
+  justify-content: right;
+}
+
+footer {
+  background-color: #c7ffe8;
+
+  /* font-family: "Delicious Handrawn";
+  font-size: larger; */
+}
+
+section {
+  padding: 8px;
+  flex: 4px;
+}
+
+/* .contacts {
+  font-family: "Open Sans", sans-serif;
+  font-size: smaller;
+} */
+
+/* Shift the heading text to the left, by default it is centered */
+table caption {
+  text-align: left;
+}
+
+/* We "collapse" the frames of adjacent cells */
+table {
+  border-collapse: collapse;
+}
+
+/* 
+  Add a border and padding to the cells, the distance from the content to the border.
+  To control the vertical position, the caption-side property is used.
+*/
+table th,
+table td {
+  padding: 12px;
+  border: 2px solid #5d5d5d;
+}

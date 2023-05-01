@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Kurale&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Study Timer</title>
+  </head>
+  <body>
+    <header>
+      <h1><a href="./index.html" class="logo">✌️My website</a></h1>
+    </header>
+    <h1>Study Timer</h1>
+
+    <p id="timer">25:00</p>
+
+    <button onclick="startTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+
+    <script>
+      var studyTime = 25; // minutes
+      var breakTime = 5; // minutes
+      var timeLeft = studyTime * 60; // seconds
+      var isBreak = false;
+      var timer;
+
+      function startTimer() {
+        timer = setInterval(updateTimer, 1000);
+      }
+
+      function stopTimer() {
+        clearInterval(timer);
+        timeLeft = studyTime * 60;
+        isBreak = false;
+        document.getElementById("timer").innerHTML = "25:00";
+      }
+
+      function updateTimer() {
+        var minutes = Math.floor(timeLeft / 60);
+        var seconds = timeLeft % 60;
+        var timerDisplay = document.getElementById("timer");
+
+        if (timeLeft <= 0) {
+          if (isBreak) {
+            timeLeft = studyTime * 60;
+            isBreak = false;
+            timerDisplay.innerHTML = "25:00";
+          } else {
+            timeLeft = breakTime * 60;
+            isBreak = true;
+            timerDisplay.innerHTML = "5:00";
+          }
+          // play a pop sound
+          var audio = new Audio("./sounds");
+          audio.play();
+        } else {
+          timerDisplay.innerHTML =
+            (minutes < 10 ? "0" : "") +
+            minutes +
+            ":" +
+            (seconds < 10 ? "0" : "") +
+            seconds;
+          timeLeft--;
+        }
+      }
+    </script>
+  </body>
+</html>

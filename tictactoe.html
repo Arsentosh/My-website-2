@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="./css/styles.css" />
+<html>
+  <head>
+    <title>Tic Tac Toe</title>
+    <style>
+      .board {
+        display: grid;
+        grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+        gap: 5px;
+      }
+      .cell {
+        border: 8px solid black;
+        font-size: 12em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .cell.x {
+        color: red;
+      }
+      .cell.o {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="board">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <script>
+      const cells = document.querySelectorAll(".cell");
+      let currentPlayer = "x";
+      cells.forEach((cell) => {
+        cell.addEventListener("click", () => {
+          if (!cell.classList.contains("x") && !cell.classList.contains("o")) {
+            cell.classList.add(currentPlayer);
+            cell.textContent = currentPlayer.toUpperCase();
+            currentPlayer = currentPlayer === "x" ? "o" : "x";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
