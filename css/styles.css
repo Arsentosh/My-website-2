@@ -1,5 +1,6 @@
 :root {
   --nice-black-color: #2a2a2a;
+  --lb-gradient: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
 }
 
 body {
@@ -24,7 +25,7 @@ body {
 }
 
 #my_website {
-  background-color: #bdf7ff;
+  background: var(--lb-gradient);
 }
 
 li {
@@ -66,6 +67,15 @@ header {
   align-items: center;
   padding-right: 24px;
 } */
+
+.nav {
+  background: rgb(0, 125, 255);
+  background: linear-gradient(
+    189deg,
+    rgba(0, 125, 255, 1) 0%,
+    rgba(45, 234, 253, 1) 100%
+  );
+}
 
 /* 
 .menu {
@@ -122,10 +132,6 @@ a.logo:hover {
 
 a:focus {
   color: tomato;
-}
-
-a:active {
-  color: teal;
 }
 
 .my-english-project-item {
