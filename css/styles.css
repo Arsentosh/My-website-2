@@ -1,6 +1,15 @@
 :root {
   --nice-black-color: #2a2a2a;
-  --lb-gradient: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+  --lb-gradient: radial-gradient(
+    circle,
+    rgba(0, 220, 255, 0.5) 0%,
+    rgba(43, 72, 212, 0.5) 100%
+  );
+  --lg-gradient: linear-gradient(
+    287deg,
+    rgba(101, 191, 58, 0.5) 0%,
+    rgba(31, 227, 166, 0.5) 100%
+  );
 }
 
 body {
@@ -8,196 +17,103 @@ body {
   margin: 16px;
   background-color: rgb(255, 255, 255);
   font-size: 18px;
+  padding: 20px 20px;
 }
 
-.logo {
-  font-family: "Ubuntu";
-  color: var(--nice-black-color);
-  text-decoration: wavy;
-  justify-content: center;
-  display: flex;
-  font-size: 50px;
-  display: inline-flex;
+.container {
+  margin: 120px 0;
+}
+
+.link {
+  text-decoration: none;
 }
 
 .list {
   list-style: none;
 }
 
-#my_website {
-  background: var(--lb-gradient);
-}
-
-li {
-  color: var(--nice-black-color);
-}
-
 b {
-  color: var(--nice-black-color);
-  background-color: #b5ffaa;
+  font-size: 20px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  margin: 20px 0;
+  justify-content: center;
 }
 
 .logo:hover {
-  color: var(--nice-black-color);
+  color: tomato;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* text-shadow: 4px 4px 8px rgb(255, 255, 255); */
 }
 
-.top {
-  /* font-size: 48px;
+.header {
   display: flex;
-  justify-content: right; */
-  text-decoration: none;
+  font-display: row;
+  background: var(--lb-gradient);
+  box-shadow: 8px 8px 4px grey;
+  margin-bottom: 16px;
+  padding: 8px 16px;
 }
-
-/* .top-text {
-  font-size: 12px;
-} */
-
-header {
-  background-color: #c2f9ff;
-  width: 100%;
-  /* position: unset; */
-  /* justify-content: center;
-  display: flex; */
-}
-
-/* .header-item {
- display: inline-flex;
-  gap: 40px;
-  height: 100px;
-  align-items: center;
-  padding-right: 24px;
-} */
 
 .nav {
-  background: rgb(0, 125, 255);
-  background: linear-gradient(
-    189deg,
-    rgba(0, 125, 255, 1) 0%,
-    rgba(45, 234, 253, 1) 100%
-  );
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 20px;
 }
 
-/* 
-.menu {
-  list-style: none;
-  position: absolute;
-  top: 10px;
-  right: 100px;
-} */
+.end {
+  display: flex;
+}
 
 .menu {
-  list-style: none;
-}
-
-.reason-for-writing-website {
-  background-color: #c7ffe8;
-}
-
-h2 {
-  background-color: #bdf7ff;
   display: flex;
-  justify-content: center;
-  font-size: 30px;
+  flex-direction: row;
+  gap: 36px;
 }
 
-/* .reason-for-writing-website {
-  font-family: "Delicious Handrawn";
-  font-size: larger;
-} */
-
-.inspiration {
-  text-decoration: dotted;
+.menu-item-link {
+  color: #000000;
 }
 
-.dictionary {
-  background-color: #4cffb4;
-  width: 4.8em;
-}
-
-/* .chess {
-  background-image: url("https://cdn.hswstatic.com/gif/chess-4.jpg");
-} */
-
-.describing_of_my_days {
-  /* background-image: url("https://st4.depositphotos.com/14730510/39794/i/450/depositphotos_397940336-stock-photo-grunge-old-page-notebook-background.jpg"); */
-}
-
-a:hover {
+.menu-item-link:hover {
   color: tomato;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* text-shadow: 4px 4px 8px rgb(255, 255, 255); */
 }
 
-a.logo:hover {
-  color: rgb(88, 88, 88);
-}
-
-a:focus {
-  color: tomato;
-}
-
-.my-english-project-item {
-  color: rgba(255, 255, 255, 0);
-}
-
-.pickle {
-  color: teal;
-}
-
-.about-me {
-  background-color: #a1ffd8;
-}
-
-button {
-  background-color: #a1c3ff;
-  display: flex;
-  justify-content: right;
-}
-
-footer {
-  background-color: #c7ffe8;
-
-  /* font-family: "Delicious Handrawn";
-  font-size: larger; */
-}
-
-section {
-  padding: 8px;
-  flex: 4px;
-}
-
-/* .contacts {
-  font-family: "Open Sans", sans-serif;
-  font-size: smaller;
-} */
-
-/* Shift the heading text to the left, by default it is centered */
-table caption {
-  text-align: left;
-}
-
-/* We "collapse" the frames of adjacent cells */
-table {
-  border-collapse: collapse;
-}
-
-/* 
-  Add a border and padding to the cells, the distance from the content to the border.
-  To control the vertical position, the caption-side property is used.
-*/
-table th,
-table td {
+.reason {
+  background: var(--lg-gradient);
+  box-shadow: 4px 4px 4px grey;
   padding: 12px;
-  border: 2px solid #5d5d5d;
+  margin-bottom: 16px;
 }
 
-.cell {
-  padding: 30px;
-  margin: 4px;
+.interesting-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
-/* .w {
-  width: 120px;
-  height: 120px;
-  border-radius: 40%;
-  background-color: #66af4c;
-  border: 2px solid #7000d2;
-} */
+.interesting-link:hover {
+  color: tomato;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.content-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.descr-link:hover {
+  color: tomato;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
